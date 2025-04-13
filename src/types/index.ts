@@ -1,0 +1,57 @@
+export interface ImageFile {
+  id: string;
+  userId: string;
+  imageUrl?: string;
+  folderId?: string;
+  beforeSize?: number;
+  afterSize?: number;
+  uploadDate?: number;
+  updatedAt?: number;
+  isPrivate?: boolean;
+  isDeleted?: boolean;
+  isArchived?: boolean;
+  title?: string;
+  tags?: string[];
+  description?: string;
+  isFolder?: boolean;
+  belongsToFolder?: boolean;
+  type?: string;
+  mimeType?: string;
+  fileUrl?: string;
+  projectId?: string;
+  error?: string;
+  contents?: ImageFile[];
+}
+
+export interface UserInfo {
+  id: string;
+  email: string;
+  name: string;
+}
+
+export interface HttpClientConfig {
+  apiKey: string;
+  baseUrl: string;
+  retryOptions?: {
+    retries: number;
+    delay: number;
+  };
+}
+
+export interface ImageMetadata {
+  [key: string]: string | number | boolean;
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  [key: string]: any;
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  membersCount?: number;
+}
