@@ -9,10 +9,19 @@
     "strict": true,
     "baseUrl": "./src",
     "paths": {
-      "@core/*": ["core/*"],
-      "@clients/*": ["clients/*"],
-      "@types/*": ["types/*"]
+      "@core/*": [
+        "core/*"
+      ],
+      "@clients/*": [
+        "clients/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ]
     }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/tests"
+  ]
 }

@@ -44,10 +44,14 @@ export interface ImageMetadata {
 
 export interface Project {
   id: string;
+  userId: string;
   name: string;
-  createdAt: string;
-  updatedAt: string;
-  [key: string]: any;
+  description: string;
+  storage: number;
+  createdAt: number;
+  updatedAt: number;
+  users: string[];
+  tasks: string[];
 }
 
 export interface Team {

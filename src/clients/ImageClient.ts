@@ -46,7 +46,9 @@ export class ImageClient {
           contentType: 'application/octet-stream',
         });
       } else {
-        formData.append('file', file);
+        formData.append('file', file, {
+          contentType: 'application/octet-stream',
+        });
       }
 
       if (metadata) {
@@ -80,7 +82,7 @@ export class ImageClient {
       const response = await this.httpClient.get(`/${currentProjectId}/${imageId}`, {
         responseType: 'arraybuffer',
       });
-      return Buffer.from(response as any);
+      return Buffer.from(response.data as any);
     } catch (error: any) {
       throw new SDKError(
         `Failed to download image ${imageId}`,
@@ -103,7 +105,7 @@ export class ImageClient {
       throw new SDKError('No active project set. Please set a project before uploading.');
     }
     try {
-      await this.httpClient.delete(`/${currentProjectId}/${imageId}`);
+      await this.httpClient.delete(`${currentProjectId}/${imageId}`);
       return { success: true };
     } catch (error: any) {
       throw new SDKError(
