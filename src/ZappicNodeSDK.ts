@@ -1,5 +1,3 @@
-// src/PlatformSDK.ts
-
 import { HttpClient } from '@core/HttpClient';
 import { AuthClient } from '@clients/AuthClient';
 import { ProjectClient } from '@clients/ProjectClient';
@@ -8,7 +6,7 @@ import { ImageClient } from '@clients/ImageClient';
 import { PermissionClient } from '@clients/PermissionClient';
 import { CONFIG } from './config';
 
-export class PlatformSDK {
+export class ZappicNodeSDK {
   private readonly httpClient: HttpClient;
 
   public auth: AuthClient;
@@ -18,7 +16,7 @@ export class PlatformSDK {
   public permission: PermissionClient;
 
   /**
-   * Initializes a new instance of the PlatformSDK class, which provides clients for
+   * Initializes a new instance of the ZappicNodeSDK class, which provides clients for
    * interacting with the Zappic API.
    *
    * The API key is the only required property, and the base URL will default to
@@ -26,7 +24,7 @@ export class PlatformSDK {
    */
   constructor() {
     if (!CONFIG.apiKey) {
-      throw new Error('API key is required to initialize PlatformSDK.');
+      throw new Error('API key is required to initialize ZappicNodeSDK.');
     }
 
     this.httpClient = new HttpClient({
