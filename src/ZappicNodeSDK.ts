@@ -2,7 +2,7 @@ import { HttpClient } from '@core/HttpClient';
 import { AuthClient } from '@clients/AuthClient';
 import { ProjectClient } from '@clients/ProjectClient';
 import { UserClient } from '@clients/UserClient';
-import { ImageClient } from '@clients/ImageClient';
+import { ImageClient } from '@clients/FileClient';
 import { PermissionClient } from '@clients/PermissionClient';
 import { CONFIG } from './config';
 

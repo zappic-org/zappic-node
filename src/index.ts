@@ -3,11 +3,11 @@
 import { ZappicNodeSDK } from './ZappicNodeSDK';
 import { AuthClient } from './clients/AuthClient';
 import { ProjectClient } from './clients/ProjectClient';
-import { ImageClient } from './clients/ImageClient';
+import { FileClient } from './clients/FileClient';
 import { PermissionClient } from './clients/PermissionClient';
 import { SDKError } from './core/SDKError';
 
-export { ZappicNodeSDK, AuthClient, ProjectClient, ImageClient, PermissionClient, SDKError };
+export { ZappicNodeSDK, AuthClient, ProjectClient, FileClient, PermissionClient, SDKError };
 
 /**
  * Creates a new instance of the ZappicNodeSDK class, which provides clients for

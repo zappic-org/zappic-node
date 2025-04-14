@@ -1,4 +1,4 @@
-export interface ImageFile {
+export interface ZappicFile {
   id: string;
   userId: string;
   imageUrl?: string;
@@ -20,7 +20,7 @@ export interface ImageFile {
   fileUrl?: string;
   projectId?: string;
   error?: string;
-  contents?: ImageFile[];
+  contents?: ZappicFile[];
 }
 
 export interface UserInfo {
@@ -38,9 +38,9 @@ export interface HttpClientConfig {
   };
 }
 
-export interface ImageMetadata {
-  [key: string]: string | number | boolean;
-}
+// export interface ImageMetadata {
+//   [key: string]: string | number | boolean;
+// }
 
 export interface Project {
   id: string;
@@ -59,3 +59,5 @@ export interface Team {
   name: string;
   membersCount?: number;
 }
+
+export type FileChunkSize = number;
